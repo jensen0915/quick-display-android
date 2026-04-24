@@ -1,0 +1,43 @@
+*.iml
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local environment
+local.properties
+
+# Android Studio / IntelliJ
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+
+# Native build outputs
+.externalNativeBuild/
+.cxx/
+
+# Generated captures and logs
+captures/
+
+# Signing keys and publishing secrets
+key/
+*.jks
+*.keystore
+*.pepk
+*.pem
+*.der
+
+# Release artifacts
+*.apk
+*.aab
+*.ap_
+output-metadata.json
+
+# OS files
+Thumbs.db

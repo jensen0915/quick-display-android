@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp"
+        tools:context=".MainActivity">
+
+        <ImageButton
+            android:id="@+id/BSlotBarcode"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_slot_button"
+            android:contentDescription="@string/slot_barcode"
+            android:padding="14dp"
+            android:src="@drawable/ic_slot_barcode"
+            app:layout_constraintEnd_toStartOf="@+id/BSlotQrCode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/BSlotQrCode"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_slot_button"
+            android:contentDescription="@string/slot_qrcode"
+            android:padding="14dp"
+            android:src="@drawable/ic_slot_qrcode"
+            app:layout_constraintEnd_toStartOf="@+id/BSlotPhoto"
+            app:layout_constraintStart_toEndOf="@+id/BSlotBarcode"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/BSlotPhoto"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_slot_button"
+            android:contentDescription="@string/slot_photo"
+            android:padding="14dp"
+            android:src="@drawable/ic_slot_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BSlotQrCode"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/BToggleBackground"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_toggle_button"
+            android:contentDescription="@string/dark_background"
+            android:padding="10dp"
+            android:src="@drawable/ic_background_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BSlotBarcode"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/IVPreviewImage"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/picture_preview"
+            android:padding="32dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BToggleBackground" />
+
+        <ImageButton
+            android:id="@+id/BSelectImage"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_action_button"
+            android:contentDescription="@string/select_image"
+            android:padding="14dp"
+            android:src="@drawable/ic_action_pick"
+            app:layout_constraintEnd_toStartOf="@+id/BRotateImage"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IVPreviewImage"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/BRotateImage"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_action_button"
+            android:contentDescription="@string/rotate_image"
+            android:padding="14dp"
+            android:src="@drawable/ic_action_rotate"
+            app:layout_constraintEnd_toStartOf="@+id/BRemoveImage"
+            app:layout_constraintStart_toEndOf="@+id/BSelectImage"
+            app:layout_constraintTop_toBottomOf="@+id/IVPreviewImage"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/BRemoveImage"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_action_button_danger"
+            android:contentDescription="@string/remove_image"
+            android:padding="14dp"
+            android:src="@drawable/ic_action_remove"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BRotateImage"
+            app:layout_constraintTop_toBottomOf="@+id/IVPreviewImage"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
